@@ -19,6 +19,8 @@
 		2B328E63203073C9008E11D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B328E61203073C9008E11D8 /* LaunchScreen.storyboard */; };
 		2B328E70203075ED008E11D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B328E6F203075ED008E11D8 /* GoogleService-Info.plist */; };
 		2B77C7DD2040FF05007B7D30 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7DC2040FF05007B7D30 /* FeedVC.swift */; };
+		2B77C7DF2041E86D007B7D30 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7DE2041E86D007B7D30 /* CreateGroupsVC.swift */; };
+		2B77C7E12041EC39007B7D30 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7E02041EC39007B7D30 /* UserCell.swift */; };
 		2B8DA0CE203078F6006F73A8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0CD203078F6006F73A8 /* DataService.swift */; };
 		2B8DA0D02030AE14006F73A8 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0CF2030AE14006F73A8 /* AuthVC.swift */; };
 		2B8DA0D22030AE4E006F73A8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0D12030AE4E006F73A8 /* LoginVC.swift */; };
@@ -43,6 +45,8 @@
 		2B328E64203073C9008E11D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B328E6F203075ED008E11D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B77C7DC2040FF05007B7D30 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		2B77C7DE2041E86D007B7D30 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
+		2B77C7E02041EC39007B7D30 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		2B8DA0CD203078F6006F73A8 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2B8DA0CF2030AE14006F73A8 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		2B8DA0D12030AE4E006F73A8 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				2B226232203F433500C4DEAA /* MeVC.swift */,
 				2B226234203F496700C4DEAA /* CreatePostVC.swift */,
 				2B77C7DC2040FF05007B7D30 /* FeedVC.swift */,
+				2B77C7DE2041E86D007B7D30 /* CreateGroupsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				2B8DA0D32030AEF8006F73A8 /* insertTextField.swift */,
 				2B8DA0D52030B623006F73A8 /* ShadowView.swift */,
 				2B2262382040E6C300C4DEAA /* FeedCell.swift */,
+				2B77C7E02041EC39007B7D30 /* UserCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 				2B328E5B203073C9008E11D8 /* GroupsVC.swift in Sources */,
 				2B8DA0D22030AE4E006F73A8 /* LoginVC.swift in Sources */,
 				2B8DA0D82030BF1C006F73A8 /* AuthService.swift in Sources */,
+				2B77C7DF2041E86D007B7D30 /* CreateGroupsVC.swift in Sources */,
+				2B77C7E12041EC39007B7D30 /* UserCell.swift in Sources */,
 				2B22623B2040E8B600C4DEAA /* message.swift in Sources */,
 				2B77C7DD2040FF05007B7D30 /* FeedVC.swift in Sources */,
 				2B328E57203073C9008E11D8 /* AppDelegate.swift in Sources */,

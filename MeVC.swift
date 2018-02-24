@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MeVC: UIViewController {
 
@@ -19,9 +20,28 @@ class MeVC: UIViewController {
 
     }
     
-    @IBAction func singOutBtnWasPressed(_ sender: Any) {
-        // sign out user
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.email.text = Auth.auth().currentUser?.email
     }
     
+    @IBAction func singOutBtnWasPressed(_ sender: Any) {
+        
+        let logoutPopup = UIAlertController(title: "Logout?", message: "are you sure you want to logout?", preferredStyle: .actionSheet)
+        
+        let logoutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonIsTapped) in
+            
+            do{
+                try Auth.auth().signOut()
+                let AuthVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthVC") as? AuthVC
+                self.present(AuthVC!, animated: true, completion: nil)
+            }catch{
+                print(error)
+            }
+        }
+        
+        logoutPopup.addAction(logoutAction)
+        present(logoutPopup, animated: true, completion: nil)
+    }
 }
