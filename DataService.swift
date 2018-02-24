@@ -40,5 +40,31 @@ class DataService {
     func createDBUser(uid: String, userData: Dictionary<String, Any>){
         REF_USERS.child(uid).updateChildValues(userData)
     }
+    
+    func uploadPost(withMessage message: String, forUI uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) ->()) {
+        
+        if groupKey != nil{
+            // send to groups reference.
+            
+        }else{
+            REF_FEED.childByAutoId().updateChildValues(["content":message, "senderId": uid])
+            sendComplete(true)
+        }
+    }
+    
+    func getAllFeedMessages(handlers: @escaping (_ messages: [Message]) ->()){
+        var messageArray = [Message]()
+        REF_FEED.observeSingleEvent(of: .value, with: { (feedMessageSnapShot) in
+            guard let feedMessageSnapShot = feedMessageSnapShot.children.allObjects as? [DataSnapshot] else { return }
+            
+            for message in feedMessageSnapShot{
+                let content = message.childSnapshot(forPath: "content").value as! String
+                let senderId = message.childSnapshot(forPath: "senderId").value as! String
+                let message = Message(content: content, senderId: senderId)
+                messageArray.append(message)
+            }
+            handlers(messageArray)
+        })
+    }
 }
 
