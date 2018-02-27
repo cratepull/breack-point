@@ -21,6 +21,8 @@
 		2B77C7DD2040FF05007B7D30 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7DC2040FF05007B7D30 /* FeedVC.swift */; };
 		2B77C7DF2041E86D007B7D30 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7DE2041E86D007B7D30 /* CreateGroupsVC.swift */; };
 		2B77C7E12041EC39007B7D30 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7E02041EC39007B7D30 /* UserCell.swift */; };
+		2B77C7E32044BDE1007B7D30 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7E22044BDE1007B7D30 /* GroupCell.swift */; };
+		2B77C7E52044C70D007B7D30 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B77C7E42044C70D007B7D30 /* Group.swift */; };
 		2B8DA0CE203078F6006F73A8 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0CD203078F6006F73A8 /* DataService.swift */; };
 		2B8DA0D02030AE14006F73A8 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0CF2030AE14006F73A8 /* AuthVC.swift */; };
 		2B8DA0D22030AE4E006F73A8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8DA0D12030AE4E006F73A8 /* LoginVC.swift */; };
@@ -47,6 +49,8 @@
 		2B77C7DC2040FF05007B7D30 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		2B77C7DE2041E86D007B7D30 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		2B77C7E02041EC39007B7D30 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2B77C7E22044BDE1007B7D30 /* GroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		2B77C7E42044C70D007B7D30 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		2B8DA0CD203078F6006F73A8 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2B8DA0CF2030AE14006F73A8 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		2B8DA0D12030AE4E006F73A8 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				2B8DA0D52030B623006F73A8 /* ShadowView.swift */,
 				2B2262382040E6C300C4DEAA /* FeedCell.swift */,
 				2B77C7E02041EC39007B7D30 /* UserCell.swift */,
+				2B77C7E22044BDE1007B7D30 /* GroupCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2B22623A2040E8B600C4DEAA /* message.swift */,
+				2B77C7E42044C70D007B7D30 /* Group.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,11 +318,13 @@
 				2B2262372040DF6300C4DEAA /* UIViewExt.swift in Sources */,
 				2B2262392040E6C300C4DEAA /* FeedCell.swift in Sources */,
 				2B226233203F433500C4DEAA /* MeVC.swift in Sources */,
+				2B77C7E32044BDE1007B7D30 /* GroupCell.swift in Sources */,
 				2B8DA0D02030AE14006F73A8 /* AuthVC.swift in Sources */,
 				2B328E5B203073C9008E11D8 /* GroupsVC.swift in Sources */,
 				2B8DA0D22030AE4E006F73A8 /* LoginVC.swift in Sources */,
 				2B8DA0D82030BF1C006F73A8 /* AuthService.swift in Sources */,
 				2B77C7DF2041E86D007B7D30 /* CreateGroupsVC.swift in Sources */,
+				2B77C7E52044C70D007B7D30 /* Group.swift in Sources */,
 				2B77C7E12041EC39007B7D30 /* UserCell.swift in Sources */,
 				2B22623B2040E8B600C4DEAA /* message.swift in Sources */,
 				2B77C7DD2040FF05007B7D30 /* FeedVC.swift in Sources */,

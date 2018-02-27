@@ -369,7 +369,7 @@
         <!--Grups-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="GroupsVC" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="GroupsVC" customModule="breackpoint" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -416,13 +416,53 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="AJp-UA-Yl4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="AJp-UA-Yl4" customClass="GroupCell" customModule="breackpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AJp-UA-Yl4" id="gM4-bo-BQe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="group title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RER-RJ-gyE">
+                                                    <rect key="frame" x="16" y="16" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                                    <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-ne-W1h">
+                                                    <rect key="frame" x="28" y="45" width="319" height="46"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="group description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-Gx-7Np">
+                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="_ members." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-ca-elj">
+                                                            <rect key="frame" x="0.0" y="29" width="319" height="17"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RER-RJ-gyE" firstAttribute="top" secondItem="gM4-bo-BQe" secondAttribute="topMargin" constant="8" id="7yK-uG-4xC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RER-RJ-gyE" secondAttribute="trailing" constant="8" id="Bmk-cX-HcM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VgK-ne-W1h" secondAttribute="bottom" id="FAb-b5-BiD"/>
+                                                <constraint firstItem="VgK-ne-W1h" firstAttribute="leading" secondItem="gM4-bo-BQe" secondAttribute="leadingMargin" constant="20" id="HO0-sb-RZ9"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VgK-ne-W1h" secondAttribute="trailing" constant="20" id="KDo-iQ-m03"/>
+                                                <constraint firstItem="RER-RJ-gyE" firstAttribute="leading" secondItem="gM4-bo-BQe" secondAttribute="leadingMargin" constant="8" id="bBI-cd-U62"/>
+                                                <constraint firstItem="VgK-ne-W1h" firstAttribute="top" secondItem="RER-RJ-gyE" secondAttribute="bottom" constant="8" id="zkQ-Xu-fzK"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="groupDescriptionLabel" destination="eJ1-Gx-7Np" id="qBW-5z-Qti"/>
+                                            <outlet property="groupTitleLabel" destination="RER-RJ-gyE" id="GVP-pt-shr"/>
+                                            <outlet property="memberCountLabel" destination="Nue-ca-elj" id="ivp-Cn-o44"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -439,10 +479,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Grups" image="groups-tabIcon" selectedImage="groups-tabIcon" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="groupsTableView" destination="ixF-BY-SzX" id="JXR-BY-vYP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="884"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="883.80809595202402"/>
         </scene>
         <!--Create GroupsVC-->
         <scene sceneID="FQC-QQ-aMk">
@@ -470,7 +513,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkB-v2-Mif">
-                                        <rect key="frame" x="297" y="32" width="59" height="30"/>
+                                        <rect key="frame" x="297" y="32" width="65" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="2h9-L3-KGK"/>
                                             <constraint firstAttribute="height" constant="30" id="DXc-cF-5HA"/>
@@ -538,7 +581,7 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add people to your group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAX-Az-Juj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add people to your group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="QAX-Az-Juj">
                                         <rect key="frame" x="0.0" y="120" width="343" height="19"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
